@@ -1,4 +1,4 @@
-# PHPSQLQueryBrowser
+# PHPSQLQueryBrowser v1
 MySQL Query Browser with PHP
 <br/>
 You can use it like a MySQLQueryBrowser. But it written in PHP.<br/>
