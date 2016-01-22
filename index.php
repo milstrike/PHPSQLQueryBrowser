@@ -5,10 +5,10 @@ error_reporting(0);
 $infoResult = "";
 $column = 0;
 
+//Configure this first!
 $servername = "localhost";
 $username = "root";
 $password = "";
-
 
 // Create connection
 $conn = mysql_connect($servername, $username, $password);
@@ -16,14 +16,15 @@ $conn = mysql_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysql_connect_error());
 }
+else{
+    $infoResult = "It Works!";
+}
 
 if (isset($_POST['enterCommand'])) {
     $sql = $_POST['command'];
-    
     $sql = $sql;
     $result = mysql_query($sql);
     
-
 if (!$result) {
     $infoResult =  "DB Error, could not list tables\n";
     $infoResult =  'MySQL Error: ' . mysql_error();
@@ -52,8 +53,6 @@ $infoResult = $infoResult."</tr></table>";
 }
 mysql_free_result($result);
 }
-
-
 ?>
 <html>
     <head>
